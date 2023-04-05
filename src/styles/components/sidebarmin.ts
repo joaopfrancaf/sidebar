@@ -8,6 +8,8 @@ export const DivSidebarminStyled = styled('div', {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+
+    boxShadow:'rgba(149, 157, 165, 0.2) 0px 8px 24px',
 })
 
 export const DivLogoStyled = styled('div', {

@@ -12,31 +12,48 @@ import Pets from '../assets/pet.svg'
 import User from '../assets/user.svg'
 import Vets from '../assets/vet.svg'
 import Settings from '../assets/settings.svg'
+import { useState } from "react";
+import Sidebarmin from "./sidebarmin";
 
-export default function Sidebar() {  
+export default function Sidebar() {
+  const [sidebar,setSidebar] = useState(true)
+
+  const showSidebar = () => setSidebar(!sidebar)
+
+  console.log(sidebar)
+  
     return (
-      <DivSideBarContainerStyled>
-        <DivLogoStyled>
-          <Image src={Logo} alt={""} width={64} height={25.12}/>
-          <button><Image src={Menu} alt={""} width={24}/></button>
-        </DivLogoStyled>
+      <>
+      {sidebar === true && 
+        (
+          <DivSideBarContainerStyled>
+          <DivLogoStyled>
+            <Image src={Logo} alt={""} width={64} height={25.12}/>
+            <button onClick={showSidebar}><Image src={Menu} alt={""} width={24}/></button>
+          </DivLogoStyled>
+  
+          <DivNavtyled><Image src={Lupa} alt={""} width={24}/>Buscar</DivNavtyled>
+          <DivNavtyled><Image src={Grid} alt={""} width={24}/>Dashboard</DivNavtyled>
+          <DivNavtyled><Image src={Pets} alt={""} width={24}/>Pets</DivNavtyled>
+          <DivNavtyled><Image src={User} alt={""} width={24}/>Clientes</DivNavtyled>
+          <DivNavtyled><Image src={Vets} alt={""} width={24}/>Vets</DivNavtyled>
+          <DivNavtyled><Image src={Settings} alt={""} width={24}/>Ajustes</DivNavtyled>
+            
+  
+          <DivFooter>
+            <Image src={FotoAvatar} alt={""} width={45} height={45}/>
+            <div>
+              <span>Elanor Rigby</span>
+              <p>Vet</p>
+            </div>
+              <Image src={LogOut} alt={""} width={24}/>
+          </DivFooter>
+        </DivSideBarContainerStyled>
+        )}
 
-        <DivNavtyled><Image src={Lupa} alt={""} width={24}/>Buscar</DivNavtyled>
-        <DivNavtyled><Image src={Grid} alt={""} width={24}/>Dashboard</DivNavtyled>
-        <DivNavtyled><Image src={Pets} alt={""} width={24}/>Pets</DivNavtyled>
-        <DivNavtyled><Image src={User} alt={""} width={24}/>Clientes</DivNavtyled>
-        <DivNavtyled><Image src={Vets} alt={""} width={24}/>Vets</DivNavtyled>
-        <DivNavtyled><Image src={Settings} alt={""} width={24}/>Ajustes</DivNavtyled>
-          
-
-        <DivFooter>
-          <Image src={FotoAvatar} alt={""} width={45} height={45}/>
-          <div>
-            <span>Elanor Rigby</span>
-            <p>Vet</p>
-          </div>
-            <Image src={LogOut} alt={""} width={24}/>
-        </DivFooter>
-      </DivSideBarContainerStyled>
+        {sidebar === false && (
+          <Sidebarmin/>
+        )}
+      </>
     )
   }

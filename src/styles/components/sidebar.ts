@@ -7,7 +7,7 @@ export const DivSideBarContainerStyled = styled('div', {
 
     display: 'flex',
     flexDirection: 'column',
-
+    boxShadow:'rgba(149, 157, 165, 0.2) 0px 8px 24px',
 })
 
 export const DivLogoStyled = styled('div', {
@@ -26,8 +26,6 @@ export const DivLogoStyled = styled('div', {
     },
 
     '&:hover': {
-        backgroundColor: '$lightgreen',
-
         button: {
             backgroundColor: '$lightgreen',
         }

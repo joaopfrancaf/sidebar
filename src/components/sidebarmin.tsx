@@ -9,12 +9,23 @@ import Vets from '../assets/vet.svg'
 import Settings from '../assets/settings.svg'
 import LogOut from '../assets/log-out.svg'
 import { DivLogoStyled, DivNavtyled, DivFooter, DivSidebarminStyled  } from "../styles/components/sidebarmin";
+import { useState } from "react";
 
 
 export default function Sidebarmin() {
+    const [sidebar, setSidebar] = useState(true)
+
+    function SidebarChange () {
+        setSidebar(!sidebar)
+    }
+
+    console.log(sidebar)
+
     return (
-        <DivSidebarminStyled>
-            <DivLogoStyled><button><Image src={Menu} alt={""} width={24}/></button></DivLogoStyled>
+        <>
+        {sidebar === true && (
+            <DivSidebarminStyled>
+            <DivLogoStyled><button onClick={SidebarChange}><Image src={Menu} alt={""} width={24}/></button></DivLogoStyled>
 
             <DivNavtyled><Image src={Lupa} alt={""} width={24}/></DivNavtyled>
             <DivNavtyled><Image src={Grid} alt={""} width={24}/></DivNavtyled>
@@ -26,5 +37,8 @@ export default function Sidebarmin() {
 
             <DivFooter><Image src={LogOut} alt={""} width={24}/></DivFooter>
         </DivSidebarminStyled>
+        )}
+        
+        </>
     )
 }
