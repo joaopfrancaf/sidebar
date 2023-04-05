@@ -10,6 +10,7 @@ import Settings from '../assets/settings.svg'
 import LogOut from '../assets/log-out.svg'
 import { DivLogoStyled, DivNavtyled, DivFooter, DivSidebarminStyled  } from "../styles/components/sidebarmin";
 import { useState } from "react";
+import Sidebar from "./sidebar";
 
 
 export default function Sidebarmin() {
@@ -37,6 +38,10 @@ export default function Sidebarmin() {
 
             <DivFooter><Image src={LogOut} alt={""} width={24}/></DivFooter>
         </DivSidebarminStyled>
+        )}
+
+        {sidebar === false && (
+            <Sidebar/>
         )}
         
         </>
