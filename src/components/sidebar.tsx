@@ -13,7 +13,7 @@ import User from '../assets/user.svg'
 import Vets from '../assets/vet.svg'
 import Settings from '../assets/settings.svg'
 
-export default function Sidebar() {
+export default function Sidebar() {  
     return (
       <DivSideBarContainerStyled>
         <DivLogoStyled>
