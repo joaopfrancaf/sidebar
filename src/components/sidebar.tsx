@@ -3,6 +3,8 @@ import { DivLogoStyled, DivNavtyled, DivSideBarContainerStyled, DivFooter } from
 
 import Logo from '../assets/logo.svg'
 import Menu from '../assets/menu.svg'
+import FotoAvatar from '../assets/photo.jpg'
+import LogOut from '../assets/log-out.svg'
 
 import Lupa from '../assets/search.svg'
 import Grid from '../assets/grid.svg'
@@ -27,7 +29,14 @@ export default function Sidebar() {
         <DivNavtyled><Image src={Settings} alt={""} width={24}/>Ajustes</DivNavtyled>
           
 
-        <DivFooter/>
+        <DivFooter>
+          <Image src={FotoAvatar} alt={""} width={45} height={45}/>
+          <div>
+            <span>Elanor Rigby</span>
+            <p>Vet</p>
+          </div>
+            <Image src={LogOut} alt={""} width={24}/>
+        </DivFooter>
       </DivSideBarContainerStyled>
     )
   }
