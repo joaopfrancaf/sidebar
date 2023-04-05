@@ -14,7 +14,7 @@ import { DivLogoStyled, DivNavtyled, DivFooter, DivSidebarminStyled  } from "../
 export default function Sidebarmin() {
     return (
         <DivSidebarminStyled>
-            <DivLogoStyled><Image src={Menu} alt={""} width={24}/></DivLogoStyled>
+            <DivLogoStyled><button><Image src={Menu} alt={""} width={24}/></button></DivLogoStyled>
 
             <DivNavtyled><Image src={Lupa} alt={""} width={24}/></DivNavtyled>
             <DivNavtyled><Image src={Grid} alt={""} width={24}/></DivNavtyled>

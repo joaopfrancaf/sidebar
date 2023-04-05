@@ -18,7 +18,7 @@ export default function Sidebar() {
       <DivSideBarContainerStyled>
         <DivLogoStyled>
           <Image src={Logo} alt={""} width={64} height={25.12}/>
-          <Image src={Menu} alt={""} width={24}/>
+          <button><Image src={Menu} alt={""} width={24}/></button>
         </DivLogoStyled>
 
         <DivNavtyled><Image src={Lupa} alt={""} width={24}/>Buscar</DivNavtyled>

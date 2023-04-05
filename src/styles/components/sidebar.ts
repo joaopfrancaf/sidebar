@@ -18,7 +18,20 @@ export const DivLogoStyled = styled('div', {
     justifyContent: 'space-between',
     alignItems: 'center',
 
-    padding: '0 2rem 0 1.75rem'
+    padding: '0 2rem 0 1.75rem',
+
+    button: {
+        backgroundColor: '$green',
+        borderStyle: 'none',
+    },
+
+    '&:hover': {
+        backgroundColor: '$lightgreen',
+
+        button: {
+            backgroundColor: '$lightgreen',
+        }
+    },
 })
 
 export const DivNavtyled = styled('div', {

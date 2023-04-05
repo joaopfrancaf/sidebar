@@ -6,11 +6,7 @@ export default function Home() {
 
   const [sidebarmin, setSidebarmin] = useState(false)
 
-  
-  
   return (
-    <>
-      <Sidebarmin/>
-    </>
+    <Sidebar/>
   )
 }
