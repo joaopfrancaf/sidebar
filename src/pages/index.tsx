@@ -4,9 +4,19 @@ import { useState } from "react";
 
 export default function Home() {
 
+  const [sidebar,setSidebar] = useState(true)
+
+  function handleSidebar () {
+    setSidebar(!sidebar)
+  }
+
+  console.log(sidebar)
   return (
     <>
-      <Sidebar />
+      {sidebar ? (<Sidebar onClick={handleSidebar} state={sidebar}/>) 
+      :
+      (<Sidebarmin onClick={handleSidebar} state={sidebar}/>)
+      }
     </>
   )
 }

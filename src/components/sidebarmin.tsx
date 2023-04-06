@@ -13,20 +13,11 @@ import { useState } from "react";
 import Sidebar from "./sidebar";
 
 
-export default function Sidebarmin() {
-    const [sidebar, setSidebar] = useState(true)
-
-    function SidebarChange () {
-        setSidebar(!sidebar)
-    }
-
-    console.log(sidebar)
+export default function Sidebarmin({onClick}: any) {
 
     return (
-        <>
-        {sidebar === true && (
             <DivSidebarminStyled>
-            <DivLogoStyled><button onClick={SidebarChange}><Image src={Menu} alt={""} width={24}/></button></DivLogoStyled>
+            <DivLogoStyled><button onClick={onClick}><Image src={Menu} alt={""} width={24}/></button></DivLogoStyled>
 
             <DivNavtyled><Image src={Lupa} alt={""} width={24}/></DivNavtyled>
             <DivNavtyled><Image src={Grid} alt={""} width={24}/></DivNavtyled>
@@ -38,12 +29,5 @@ export default function Sidebarmin() {
 
             <DivFooter><Image src={LogOut} alt={""} width={24}/></DivFooter>
         </DivSidebarminStyled>
-        )}
-
-        {sidebar === false && (
-            <Sidebar/>
-        )}
-        
-        </>
     )
 }
