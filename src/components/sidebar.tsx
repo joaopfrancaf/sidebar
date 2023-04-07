@@ -15,14 +15,14 @@ import Settings from '../assets/settings.svg'
 import { useState } from "react";
 import Sidebarmin from "./sidebarmin";
 
-export default function Sidebar({onClick}: any) {
+export default function Sidebar({handleSidebar}: any) {
 
     return (
       <DivSideBarContainerStyled>
             
             <DivLogoStyled>
               <Image src={Logo} alt={""} width={64} height={25.12}/>
-              <button onClick={onClick}><Image src={Menu} alt={""} width={24}/></button>
+              <button onClick={handleSidebar}><Image src={Menu} alt={""} width={24}/></button>
             </DivLogoStyled>
     
             <DivNavtyled><Image src={Lupa} alt={""} width={24}/>Buscar</DivNavtyled>

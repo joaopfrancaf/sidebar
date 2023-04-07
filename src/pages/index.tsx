@@ -10,12 +10,12 @@ export default function Home() {
     setSidebar(!sidebar)
   }
 
-  console.log(sidebar)
+  //console.log(sidebar)
   return (
     <>
-      {sidebar ? (<Sidebar onClick={handleSidebar} state={sidebar}/>) 
+      {sidebar ? (<Sidebar handleSidebar={handleSidebar}/>) 
       :
-      (<Sidebarmin onClick={handleSidebar} state={sidebar}/>)
+      (<Sidebarmin handleSidebar={handleSidebar}/>)
       }
     </>
   )
