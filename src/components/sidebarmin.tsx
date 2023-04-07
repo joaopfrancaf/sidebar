@@ -13,11 +13,11 @@ import { useState } from "react";
 import Sidebar from "./sidebar";
 
 
-export default function Sidebarmin({onClick}: any) {
+export default function Sidebarmin({handleSidebar}: any) {
 
     return (
             <DivSidebarminStyled>
-            <DivLogoStyled><button onClick={onClick}><Image src={Menu} alt={""} width={24}/></button></DivLogoStyled>
+            <DivLogoStyled><button onClick={handleSidebar}><Image src={Menu} alt={""} width={24}/></button></DivLogoStyled>
 
             <DivNavtyled><Image src={Lupa} alt={""} width={24}/></DivNavtyled>
             <DivNavtyled><Image src={Grid} alt={""} width={24}/></DivNavtyled>
